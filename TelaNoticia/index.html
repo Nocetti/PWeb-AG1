@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h3>Notícias</h3>
+        <button type="button" id="buttonCad"><img src="./imgs/cad.png">Cadastre-se</button>
+        <button type="button" id="buttonLog" onclick="openLoginForm()"><img src="./imgs/login.png">Login</button>
+    </div>
+    
+    <!---teste de login com popup
+    <div class="form-popup" id="loginForm">
+        <form action="enviarAlgumaCoisaPraAlgumLugar" class="form-container">
+            <h1>Login</h1>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Informe seu Email" name="email" required>
+        
+            <label for="psw"><b>Senha</b></label>
+            <input type="password" placeholder="Informe sua Senha" name="psw" required>
+        
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
+        </form>
+    </div>
+    -->
+
+    <main>
+        <div id="tituloNoticia">        
+            <h1>  
+                Título da Notícia          
+            </h1>
+        </div>
+        
+        <div id="resumoNoticia">        
+            <h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.         
+            </h3>
+        </div>
+
+        <div>        
+            <img id="imgNoticia" src="./imgs/ilustrativa.png"></img>
+        </div>
+
+        <div id="noticia">        
+            <p>    
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.      
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.      
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.      
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper tellus varius, tristique tortor id, pulvinar odio.      
+            </p>
+        </div>
+    </main>
+    <div class="footer">
+        <h5>Siga nossas redes sociais!</h5>
+        <button type="button" id="buttonInsta"><img src="./imgs/insta.png"></button>
+        <button type="button" id="buttonTwit"><img src="./imgs/twit.png"></button>
+        <button type="button" id="buttonTubiu"><img src="./imgs/tubiu.png"></button>
+    </div>
+
+</body>
+    <script src="./js/js.js"></script>
+</html>
