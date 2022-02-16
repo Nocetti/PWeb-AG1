@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+img{
+  max-width: 100%;
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    margin:0;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+}
+button[type="button"] {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif; 
+    float:center;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+/* Estilização do Main da Página Principal */
+main{
+  padding-top: 100px;
+  display: block;
+  justify-content: center;
+}
+main h1{
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* Estilização das Notícias Principais*/
+#principal{
+  display: flex; 
+}
+#noticia{
+  display: inline-block;
+  width: 49%;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+#noticia h3{
+  text-align: left;
+  padding-left: 40px;
+  
+}
+#noticia p{
+  text-align: justify;
+  width: 80%;
+  padding-left: 40px;
+}
+#noticia img{
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#botaoVerMais{
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  margin-top: 10px;
+  background-color: #FF0000;
+  color: white;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilização das Notícias Secundárias*/
+#secundario{
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: left;
+}
+#noticiaSecundaria{
+  display: block;
+  margin-left: 60px;
+  padding-bottom: 20px;
+}
+#noticiaSecundaria h3{
+  padding-bottom: 10px;
+}
+#noticiaSecundaria p{
+  float: left;  
+  text-align: justify;
+  display: inline;
+  width: 50%;
+  padding-bottom: 10px;
+  padding-right: 30px;
+}
+#imgSecundaria{
+  display: inline;
+  width: 20%;
+  float:inline-end;
+  padding-left: 50px;
+}
+#noticiaSecundaria a:link{
+  text-decoration: none;
+  color: black;
+}
+#noticiaSecundaria a:hover{
+  text-decoration: underline;
+  color: #FF0000;
+}
+#noticiaSecundaria a:visited{
+  text-decoration: none;
+}
+#noticiaSecundaria a:active{
+  text-decoration: underline;
+}
+#botaoCarregarMais{
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  margin-top: 10px;
+  background-color: #FF0000;
+  color: white;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
