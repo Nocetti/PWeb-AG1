@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script type="module" src="server.js"></script>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Login</title>
+        <link rel="stylesheet" href="./css/login.css">
+    </head>
+    <body>
+            
+        <div class="header">
+            <h3>Notícias</h3>
+            <button type="button" id="buttonCad"><img src="./imgs/cad.png">Cadastre-se</button>
+            <button type="button" id="buttonLog"><img src="./imgs/login.png">Login</button>
+        </div>
+    
+        <form action="/verificarLogin" method="post" class="" id="tentarLogin">
+            <h1>Login</h1>
+            <h3><input type="email" id="loginEmail" placeholder="Email" name= "loginEmail" required></h3>
+            <h3><input type="password" id="loginSenha" placeholder="Senha" minlength="8" name= "loginSenha" required></h3>
+        </form>
+        <button type="submit" form="tentarLogin" value="Submit">Login</button>
+
+        <div class="footer">
+            <h5>Siga nossas redes sociais!</h5>
+            <button type="button" id="buttonInsta"><img src="./imgs/insta.png"></button>
+            <button type="button" id="buttonTwit"><img src="./imgs/twit.png"></button>
+            <button type="button" id="buttonTubiu"><img src="./imgs/tubiu.png"></button>
+        </div>
+
+    </body>
+    <script src="./js/botoesRedirect.js"></script>
+</html>

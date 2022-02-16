@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <script type="module" src="server.js"></script>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="./css/cadastro.css">
+    </head>
+    <body>    
+
+        <div class="header">
+            <h3>Notícias</h3>
+            <button type="button" id="buttonCad"><img src="./imgs/cad.png">Cadastre-se</button>
+            <button type="button" id="buttonLog"><img src="./imgs/login.png">Login</button>
+        </div>
+        
+        <form action="/cadastro" method="post" class="" id="confirmarCadastro">
+            <h1>Cadastre-se</h1>
+            <h3><input type="text" id="cadastroNome" placeholder="Nome" name= "cadastroNome" pattern="[a-zA-Z]+" title="Cadastre com apenas letras de A a Z" required></h3>
+            <h3><input type="email" id="cadastroEmail" placeholder="E-mail" name= "cadastroEmail" title="E-mail precisa ter @texto" required></h3>
+            <h3><input type="text" id="cadastroIdade" placeholder="Idade" min="0" pattern="[0-9]+" name= "cadastroIdade" title= "Cadastre apenas números" required></h3>
+            <h3><input type="password" id="cadastroSenha" placeholder="Senha" minlength="8" name= "cadastroSenha" title="Senha com no mínimo 8 caracteres" required></h3>
+        </form>
+        <button type="submit" form="confirmarCadastro" value="Submit">Cadastrar</button>
+
+        <div class="footer">
+            <h5>Siga nossas redes sociais!</h5>
+            <button type="button" id="buttonInsta"><img src="./imgs/insta.png"></button>
+            <button type="button" id="buttonTwit"><img src="./imgs/twit.png"></button>
+            <button type="button" id="buttonTubiu"><img src="./imgs/tubiu.png"></button>
+        </div>
+
+    </body>
+    <script src="./js/botoesRedirect.js"></script>
+</html>
