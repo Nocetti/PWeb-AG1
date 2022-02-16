@@ -9,7 +9,6 @@ const db = low(adapter)
 const app = express();
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }));
-
 const defaultData = {
 	usuario: [
 		{
@@ -31,6 +30,10 @@ app.get("/usuario", (req, res) => {
 });
 
 app.get("/", (req,res) => {
+	res.sendFile(__dirname + "/TelaNoticia/index.html");
+});
+
+app.get("/cadastro", (req,res) => {
 	res.sendFile(__dirname + "/cadastro.html");
 });
 
