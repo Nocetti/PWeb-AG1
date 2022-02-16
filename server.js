@@ -3,10 +3,13 @@ const bodyParser= require('body-parser');
 const res = require("express/lib/response")
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
+const alert = require('alert')
 
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 const app = express();
+let atualmenteLogado = new Boolean(false);
+
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }));
 const defaultData = {
@@ -30,15 +33,34 @@ app.get("/usuario", (req, res) => {
 });
 
 app.get("/", (req,res) => {
-	res.sendFile(__dirname + "/TelaNoticia/index.html");
+	res.sendFile(__dirname + "/TelaPrincipal/index.html");
+});
+
+app.get("/noticia", (req,res) => {
+	if (atualmenteLogado == false) {
+		alert("Você ainda não está logado");
+		res.redirect('http://localhost:3000/');
+	} else {
+		res.sendFile(__dirname + "/TelaNoticia/index.html");
+	}
 });
 
 app.get("/cadastro", (req,res) => {
-	res.sendFile(__dirname + "/cadastro.html");
+	if (atualmenteLogado == true) {
+		alert("Você já está logado");
+		res.redirect('http://localhost:3000/');
+	} else {
+		res.sendFile(__dirname + "/TelaCadastro/cadastro.html");
+	}
 });
 
 app.get("/login", (req,res) => {
-	res.sendFile(__dirname + "/login.html");
+	if (atualmenteLogado == true) {
+		alert("Você já está logado");
+		res.redirect('http://localhost:3000/');
+	} else {
+		res.sendFile(__dirname + "/TelaLogin/login.html");
+	}
 });
 
 app.post("/cadastro", (req, res) => {
@@ -58,31 +80,32 @@ app.post("/cadastro", (req, res) => {
 });
 
 app.post("/verificarLogin", (req, res) => {
-
-	const name = req.body.loginNome;
-	const password = req.body.loginSenha;
-	//console.log (usuer);
-	const teste = db.get("usuario").value();
-	var conseguiuLogar = new Boolean(false);	
-	for (var x in teste) {
-		if (conseguiuLogar == false) {
-			const usuer = db.get("usuario").value()[x];
-			if (name == usuer['cadastroNome']) {
-				if (password == usuer['cadastroSenha']){
-					console.log ("Login Feito com Sucesso");
-					conseguiuLogar = true;
+	if (atualmenteLogado == false) {
+		const email = req.body.loginEmail;
+		const password = req.body.loginSenha;
+		const listaUsuarios = db.get("usuario").value();	
+		for (var x in listaUsuarios) {
+			if (atualmenteLogado == false) {
+				const usuarioAtual = db.get("usuario").value()[x];
+				if (email == usuarioAtual['cadastroEmail']) {
+					if (password == usuarioAtual['cadastroSenha']){
+						console.log ("Login Feito com Sucesso");
+						atualmenteLogado = true;
+					} else {
+						console.log ("Senha Errada");
+					}	
 				} else {
-					console.log ("Senha Errada");
-				}	
-			} else {
-				console.log ("Usuário não reconhecido");
+					console.log ("Usuário não reconhecido");
+				}
 			}
+		
 		}
-	
 	}
-	if(conseguiuLogar == true) {
+	if (atualmenteLogado == true) {
+		alert("Login executado com sucesso");
 		res.redirect('http://localhost:3000/');
 	} else {
+		alert("Email ou Senha incorretos");
 		res.redirect('http://localhost:3000/login');
 	}
 });

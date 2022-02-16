@@ -27,6 +27,27 @@
       "cadastroEmail": "cc@abc",
       "cadastroIdade": "121",
       "cadastroSenha": "asdasd12"
+    },
+    {
+      "id": 4,
+      "cadastroNome": "Higor",
+      "cadastroEmail": "higor@higor.com",
+      "cadastroIdade": "30",
+      "cadastroSenha": "12345645"
+    },
+    {
+      "id": 5,
+      "cadastroNome": "sdadasdsa",
+      "cadastroEmail": "asdasd@adsasd",
+      "cadastroIdade": "952998",
+      "cadastroSenha": "asddasdsa"
+    },
+    {
+      "id": 6,
+      "cadastroNome": "sadasd",
+      "cadastroEmail": "asdas@asdadsasd",
+      "cadastroIdade": "11",
+      "cadastroSenha": "asdasdasdsda"
     }
   ]
 }
