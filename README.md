@@ -12,9 +12,14 @@ Documento em PDF: [Avaliação em Grupo - AG1.pdf](https://github.com/BrunoRafae
 
 Neste projeto foi utilizado node, para inicializar o projeto você precisar ter o node em sua máquina
 Após isso vá no seu terminal, indo na pasta deste projeto e digite:
+
 npm install
+
 Assim todos os módulos do projeto serão baixados
+
 Para iniciar a aplicação digite no seu terminal:
+
 node server.js
+
 O projeto será iniciado na porta 3000, sendo ela o link: 
 http://localhost:3000/
