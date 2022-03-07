@@ -63,6 +63,10 @@ app.get("/login", (req,res) => {
 	}
 });
 
+app.get("/cadastronoticia", (req,res) => {
+	res.sendFile(__dirname + "/TelaCadastroNoticia/cadastroNoticia.html");
+});
+
 app.post("/cadastro", (req, res) => {
 	const name = req.body.cadastroNome;
 	const email = req.body.cadastroEmail;
