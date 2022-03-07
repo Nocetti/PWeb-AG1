@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <script type="module" src="server.js"></script>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="./css/cadastroNoticia.css">
+    </head>
+    <body>   
+
+        <div class="header">
+            <h3>Notícias</h3>
+            <button type="button" id="buttonCad"><img src="./imgs/cad.png">Cadastre-se</button>
+            <button type="button" id="buttonLog"><img src="./imgs/login.png">Login</button>
+        </div>
+
+        <form action="/cadastro" method="post" class="" id="confirmarCadastro">
+            <h1>Cadastre a Notícia</h1>
+            <h3><input type="text" id="titulo" placeholder="Título" name= "titulo" required></h3>
+            <h3><textarea id="manchete" placeholder="Manchete" name= "manchete" required></textarea></h3>
+            <h3><textarea id="texto" placeholder="Texto" name= "texto" required></textarea></h3>
+            <h3><input type="text" id="autor" placeholder="Autor" name= "autor" required></h3>
+            <h3><input type="datetime-local" id="data" placeholder="Data" name= "data" required></h3>
+        </form>
+        <button type="submit" form="confirmarCadastro" value="Submit">Cadastrar</button>
+
+        <div class="footer">
+            <h5>Siga nossas redes sociais!</h5>
+            <button type="button" id="buttonInsta"><img src="./imgs/insta.png"></button>
+            <button type="button" id="buttonTwit"><img src="./imgs/twit.png"></button>
+            <button type="button" id="buttonTubiu"><img src="./imgs/tubiu.png"></button>
+        </div>
+
+    </body>
+    <script src="./js/botoesRedirect.js"></script>
+</html>
